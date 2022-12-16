@@ -6,7 +6,7 @@
   font-size: 16px;
   line-height: 20px;
   margin: auto;
-}/* Add your class here */
+}
 
 .header {
   height: 100vh;
@@ -22,7 +22,7 @@
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;/* Add flex properties here */
+  align-items: center;
 }
 
 .logo {
@@ -49,7 +49,11 @@
   font-weight: bold;
 }
 
-/* Add the hover state styles for .nav__link here */
+a:hover{
+color: #1f69c9;
+}
+
+
 
 .header__title {
   font-size: 66px;
@@ -67,8 +71,11 @@
 }
 
 .header__image {
-  max-width: 636px;/* Write styles here */
+  max-width: 636px;
   z-index: 1;
+  position: absolute;
+  top: 135px;
+  right: 20px;
   
   
 }
@@ -90,18 +97,20 @@
   text-decoration: none;
 }
 
-/* Add the hover state styles for .header__link here */
+a:hover{ color: #1f69c9;
+}
 
 .header__address {
   margin: 0;
   color: #838383;
 }
 
-.staff {
+.staff {  
   padding-top: 100px;
   padding-bottom: 140px;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; 
 }
+
 
 .staff__title {
   text-align: center;
@@ -118,22 +127,29 @@
   margin: 24px 0 0;
 }
 
-/* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
+.staff__cards{
+ max-width: 760px; 
+ margin: 68px auto 40px;
+ display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
 
-.card {
+.card { 
   background-color: #fff;
   border-radius: 6px;
   padding: 32px 40px 20px 32px;
   box-sizing: border-box;
-}
+  width: 360px; 
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  }
 
 .card__content {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 360px;
-  height: 420px;
+  height: 100%;                                                                                                                                                                                                                     
 }
 
 .card__title {
@@ -154,8 +170,6 @@
   font-size: 14px;
   line-height: 20px;
   color: #838383;
-  /* Auto margins applied on a flex item automatically extend specified margin to occupy the extra space in the flex container */
-  /* In our case, this pushes the element down to the bottom */
   margin-top: auto;
 }
 
@@ -229,7 +243,8 @@
   text-decoration: none;
 }
 
-/* Add the hover state styles for .events__more here */
+a:hover{ color: #1f69c9
+}
 
 .events__cover {
   flex-grow: 1;
@@ -237,7 +252,6 @@
   flex-basis: 780px;
   max-width: 780px;
   position: relative; 
-  border: 1px solid red;
 }
 
 .events__image {
@@ -254,27 +268,27 @@
 
 .person_name_feynman {
   top: -30px; 
-  left: 319px;/* Use correct values of top/right/bottom/left properties to position the element */
+  left: 319px;
 }
 
 .person_name_burbidge {
   top: 96px;
-  right: 125px;/* Use correct values of top/right/bottom/left properties to position the element */
+  right: 125px;
 }
 
 .person_name_cannon {
   bottom: 18px;
-  right: 216px;/* Use correct values of top/right/bottom/left properties to position the element */
+  right: 216px;
 }
 
 .person_name_mitchell {
   bottom: 82px;
-  left: 142px;/* Use correct values of top/right/bottom/left properties to position the element */
+  left: 142px;
 }
 
 .person_name_tarter {
   top: 79px;
-  left: 159px;/* Use correct values of top/right/bottom/left properties to position the element */
+  left: 159px;
 }
 
 .person__image {
@@ -318,11 +332,15 @@
   list-style-type: none;
   padding: 0;
   margin: 100px 0 0;
-  /* Add styles */
+  flex-basis:auto;
+  display: flex;
+  justify-content: space-around;
 }
 
 .step {
-  /* Add styles */
+  gap: 40px;
+  width: 220px;
+ 
 }
 
 .step__title {
@@ -349,6 +367,8 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  display: flex;
+  column-gap: 120px;
 }
 
 .about__title {
@@ -356,8 +376,11 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 500;
-  z-index: 1;
   max-width: 154px;
+  z-index: 1;
+  
+
+
 }
 
 .about__content {
@@ -365,46 +388,67 @@
   line-height: 30px;
   font-weight: 400;
   max-width: 660px;
+  z-index: 2;
+
+
 }
 
-.about__paragraph {
+.about__paragraph{
   margin: 0;
+  margin-bottom: 32px;
 }
 
-.about__circle {
+.about__circle { 
   background-color: #2f80ed;
   width: 495px;
   height: 495px;
   border-radius: 50%;
-}
+  top: -121px;
+  left: -91px;
+  z-index: 0;
+  position: absolute;
 
+
+}
 .footer {
   box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding:57px 102px 60px 80px;
 }
 
 .footer__columns {
+  display: flex;
 }
 
 .footer__column_content_hours {
+  margin-left: auto;
 }
 
 .footer__column_content_social {
+margin-left: 100px;
 }
 
 .footer__logo {
+  width: 153px;
 }
 
 .footer__list {
-  /* The code below removes the default browser styles for lists */
+  
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .footer__list-item {
+ margin-bottom: 16px;
+}
+.footer__list-item:last-of-type{
+  margin-bottom: 0;
 }
 
 .footer__column-heading {
+  margin: 0 0 20px;
 }
 
 .footer__column-link {
@@ -412,10 +456,19 @@
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-
+.footer__column-link:hover{
+color: #c1c1c1;
+}
 .footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 
 .footer__copyright {
+  margin: 108px 0 0;
 }
+
