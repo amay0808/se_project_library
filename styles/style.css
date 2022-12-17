@@ -1,8 +1,7 @@
 .page{
   min-width: 1100px;
   max-width: 1600px;;
-  min-height: 1600px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:  Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   margin: auto;
@@ -35,12 +34,11 @@
   
   list-style: none;
   padding-left: 0;
+  margin-bottom: 0;
   margin-top: 8px;
   display: flex;
   align-items: center;
-  column-gap: 20px;
-
-  
+  column-gap: 20px; 
 }
 
 .nav__link {
@@ -49,7 +47,7 @@
   font-weight: bold;
 }
 
-a:hover{
+.nav__link:hover{
 color: #1f69c9;
 }
 
@@ -97,7 +95,7 @@ color: #1f69c9;
   text-decoration: none;
 }
 
-a:hover{ color: #1f69c9;
+.header__link:hover{ color: #1f69c9;
 }
 
 .header__address {
@@ -132,8 +130,10 @@ a:hover{ color: #1f69c9;
  margin: 68px auto 40px;
  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
+  list-style: none;
+  padding: 0;
 }
 
 .card { 
@@ -143,13 +143,13 @@ a:hover{ color: #1f69c9;
   box-sizing: border-box;
   width: 360px; 
   height: 420px;
-  display: flex;
-  flex-direction: column;
   }
 
 .card__content {
   width: 100%;
-  height: 100%;                                                                                                                                                                                                                     
+  height: 100%;
+  display: flex;  
+  flex-direction: column;                                                                                                                                                                                                                   
 }
 
 .card__title {
@@ -243,7 +243,7 @@ a:hover{ color: #1f69c9;
   text-decoration: none;
 }
 
-a:hover{ color: #1f69c9
+.events__more:hover{ color: #1f69c9
 }
 
 .events__cover {
@@ -328,20 +328,20 @@ a:hover{ color: #1f69c9
   line-height: 52px;
 }
 
-.membership__steps {
-  list-style-type: none;
+.membership__steps{
+  list-style: none;
   padding: 0;
   margin: 100px 0 0;
-  flex-basis:auto;
+  justify-content: center;  
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 40px;
+  
 }
 
 .step {
-  gap: 40px;
-  width: 220px;
- 
-}
+  flex-basis: 220px;
+ }
 
 .step__title {
   margin: 0;
@@ -397,7 +397,9 @@ a:hover{ color: #1f69c9
   margin: 0;
   margin-bottom: 32px;
 }
-
+.about__paragraph:last-child {
+  margin: 0;
+}
 .about__circle { 
   background-color: #2f80ed;
   width: 495px;
